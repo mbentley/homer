@@ -48,13 +48,17 @@ export default {
       if (!this.stats) {
         return "";
       }
-      return this.stats.table1Count;
+      // add together the transcode and health check queues
+      this.queues = this.stats.table1Count + this.stats.table4Count;
+      return this.queues;
     },
     errored: function () {
       if (!this.stats) {
         return "";
       }
-      return this.stats.table6Count;
+      // add together the transcode and health check errors
+      this.errors = this.stats.table3Count + this.stats.table6Count;
+      return this.errors;
     },
   },
   created() {
