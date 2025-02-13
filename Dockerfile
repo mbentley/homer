@@ -15,7 +15,7 @@ COPY . .
 RUN pnpm build
 
 # production stage
-FROM alpine:3.20
+FROM mbentley/alpine:3.20
 
 ENV GID=1000 \
     UID=1000 \
