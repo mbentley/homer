@@ -260,6 +260,7 @@ Two lines are needed in the config.yml :
 ```yaml
   type: "Lidarr", "Prowlarr", "Radarr" or "Sonarr"
   apikey: "<---insert-api-key-here--->"
+  checkInterval: 5000 # (Optional) Interval (in ms) for updating the status
 ```
 
 The url must be the root url of Lidarr, Prowlarr, Readarr, Radarr or Sonarr application.
@@ -558,8 +559,7 @@ the "Config" > "General" section of the SABnzbd config in the SABnzbd web UI.
   url: "http://192.168.0.151:8080"
   type: "SABnzbd"
   apikey: "MY-SUPER-SECRET-API-KEY"
-  downloadInterval: 5000 # (Optional) Interval (in ms) for updating the stats
-  rateDisabled: false
+  downloadInterval: 5000 # (Optional) Interval (in ms) for updating the download count
 ```
 
 ## Scrutiny
@@ -600,6 +600,7 @@ the "Web Interface" section of settings on the Tautulli web UI.
   url: "http://192.168.0.151:8181"
   type: "Tautulli"
   apikey: "<---insert-api-key-here--->"
+  checkInterval: 5000 # (Optional) Interval (in ms) for updating the status
 ```
 
 Because the service type and link don't necessarily have to match, you could
