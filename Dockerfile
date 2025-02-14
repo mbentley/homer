@@ -4,7 +4,7 @@ FROM --platform=$BUILDPLATFORM node:22-alpine3.20 AS build-stage
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
-RUN corepack enable && corepack use pnpm@9
+RUN npm install -g pnpm@9
 
 WORKDIR /app
 
