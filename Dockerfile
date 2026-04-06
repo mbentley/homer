@@ -15,7 +15,7 @@ COPY . .
 RUN pnpm build
 
 # production stage
-FROM alpine:3.23
+FROM mbentley/alpine:3.23
 
 ARG VERSION_TAG=latest
 
